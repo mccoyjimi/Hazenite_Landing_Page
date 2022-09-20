@@ -1,7 +1,7 @@
 {
-  "name": "static",
+  "name": "Hazenite-Landing-Page",
   "version": "1.0.0",
-  "description": "This is a static template with no bundling",
+  "description": "20-09-2022",
   "main": "index.html",
   "scripts": {
     "start": "serve",
