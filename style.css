@@ -1,0 +1,268 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+/**,
+*::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}*/
+body {
+  background: slategrey;
+}
+.header {
+  background: black;
+  padding: 0;
+  color: white;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+.header ul {
+  display: flex;
+  list-style: none;
+}
+
+.header ul li {
+  margin: 0px 5px;
+}
+.header li:hover {
+  color: lawngreen;
+}
+
+.header button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: royalblue;
+}
+
+.header button:focus {
+  outline: none;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/images/sunset.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-texts {
+  padding: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  color: aliceblue;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.banner-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 1.3em 0;
+  color: var(--light-color);
+}
+
+.banner-button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 22px;
+  background-color: lawngreen;
+  color: black;
+  text-transform: uppercase;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+  .banner-button:hover {
+    transform: translateX(10px);
+    cursor: pointer;
+  }
+}
+p {
+  text-align: center;
+  background-color: black;
+  border-radius: 10px;
+  color: wheat;
+}
+.product-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.container {
+  padding: 40px 5%;
+}
+
+.heading-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.heading-text span {
+  font-weight: 300;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Responsive image gallery rules begin*/
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-gallery > li {
+  flex-basis: 350px; /*width: 350px;*/
+  width: 350px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+.image-gallery::after {
+  content: "";
+  flex-basis: 350px;
+}
+
+.image-gallery li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.502);
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.2s 0.1s ease-in-out;
+  color: #fff;
+  border-radius: 5px;
+  /* center overlay text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hover */
+.image-gallery li:hover .overlay {
+  transform: scale(1);
+}
+.footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100%;
+  font-family: "Open Sans";
+  padding: 10px;
+  text-align: center;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+  color: lawngreen;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
